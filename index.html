@@ -50,25 +50,13 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0e0e10;
-            color: #f4f4f5;
             overflow-x: hidden;
         }
-
         /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0e0e10;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #27272a;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #1dbf73;
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: inherit; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1dbf73; }
 
         /* Premium Scroll Reveal Animations */
         .reveal {
@@ -140,10 +128,10 @@
         }
     </style>
 </head>
-<body class="bg-[#0e0e10] text-zinc-100 antialiased selection:bg-fiverr selection:text-white">
+<body class="bg-white dark:bg-[#0e0e10] text-zinc-900 dark:text-zinc-100 antialiased selection:bg-fiverr selection:text-white transition-colors duration-300">
 
     <!-- Header Navigation -->
-    <header class="sticky top-0 z-50 bg-[#0e0e10]/80 backdrop-blur-xl border-b border-zinc-800/80 transition-all duration-300">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-[#0e0e10]/80 backdrop-blur-xl border-b border-zinc-200 dark:border-zinc-800/80 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
             <a href="#" class="flex items-center gap-3 group">
@@ -151,47 +139,43 @@
                     T
                 </div>
                 <div>
-                    <span class="text-xl font-bold tracking-tight text-white">Tosrec <span class="text-fiverr">Studios</span></span>
-                    <span class="block text-[10px] text-zinc-400 font-semibold tracking-widest">PRO VIDEO AGENCY</span>
+                    <span class="text-xl font-bold tracking-tight text-zinc-900 dark:text-white">Tosrec <span class="text-fiverr">Studios</span></span>
+                    <span class="block text-[10px] text-zinc-500 dark:text-zinc-400 font-semibold tracking-widest">PRO VIDEO AGENCY</span>
                 </div>
             </a>
 
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#services" class="nav-link text-zinc-300 hover:text-white transition-colors">Services</a>
-                <a href="#portfolio" class="nav-link text-zinc-300 hover:text-white transition-colors">Portfolio</a>
-                <a href="#about" class="nav-link text-zinc-300 hover:text-white transition-colors">About</a>
-                <a href="#testimonials" class="nav-link text-zinc-300 hover:text-white transition-colors">Testimonials</a>
-                <a href="#contact" class="nav-link text-zinc-300 hover:text-white transition-colors">Contact</a>
+                <a href="#services" class="nav-link text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white transition-colors">Services</a>
+                <a href="#portfolio" class="nav-link text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white transition-colors">Portfolio</a>
+                <a href="#about" class="nav-link text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white transition-colors">About</a>
+                <a href="#testimonials" class="nav-link text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white transition-colors">Testimonials</a>
+                <a href="#contact" class="nav-link text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white transition-colors">Contact</a>
             </nav>
 
             <!-- Action CTA & Mobile Menu Toggle -->
             <div class="flex items-center gap-4">
-
                 <!-- Dark/Light Mode Toggle Button -->
-    <button id="theme-toggle" aria-label="Toggle theme" class="p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white transition-all">
-        <i id="theme-icon" class="fas fa-sun text-amber-400"></i>
-    </button>
-
-                
+                <button id="theme-toggle" aria-label="Toggle theme" class="p-2 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white transition-all">
+                    <i id="theme-icon" class="fas fa-sun text-amber-500 dark:text-amber-400"></i>
+                </button>
                 <a href="https://wa.me/8801312546664" target="_blank" class="btn-shimmer hidden sm:inline-flex items-center gap-2 bg-fiverr hover:bg-fiverr-dark text-white px-5 py-2.5 rounded-xl text-sm font-semibold shadow-lg shadow-fiverr/20 transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95">
                     <i class="fab fa-whatsapp text-lg"></i>
                     <span>Let's Talk</span>
-                </a> 
-                
-                <button id="mobile-menu-btn" aria-label="Toggle mobile menu" class="md:hidden text-zinc-300 hover:text-white text-xl p-2 focus:outline-none">
+                </a>
+                <button id="mobile-menu-btn" aria-label="Toggle mobile menu" class="md:hidden text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white text-xl p-2 focus:outline-none">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Navigation Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#18181b]/95 backdrop-blur-xl border-b border-zinc-800 px-6 py-6 space-y-4">
-            <a href="#services" class="block text-zinc-300 hover:text-fiverr font-medium">Services</a>
-            <a href="#portfolio" class="block text-zinc-300 hover:text-fiverr font-medium">Portfolio</a>
-            <a href="#about" class="block text-zinc-300 hover:text-fiverr font-medium">About</a>
-            <a href="#testimonials" class="block text-zinc-300 hover:text-fiverr font-medium">Testimonials</a>
-            <a href="#contact" class="block text-zinc-300 hover:text-fiverr font-medium">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 dark:bg-[#18181b]/95 backdrop-blur-xl border-b border-zinc-200 dark:border-zinc-800 px-6 py-6 space-y-4">
+            <a href="#services" class="block text-zinc-600 dark:text-zinc-300 hover:text-fiverr font-medium">Services</a>
+            <a href="#portfolio" class="block text-zinc-600 dark:text-zinc-300 hover:text-fiverr font-medium">Portfolio</a>
+            <a href="#about" class="block text-zinc-600 dark:text-zinc-300 hover:text-fiverr font-medium">About</a>
+            <a href="#testimonials" class="block text-zinc-600 dark:text-zinc-300 hover:text-fiverr font-medium">Testimonials</a>
+            <a href="#contact" class="block text-zinc-600 dark:text-zinc-300 hover:text-fiverr font-medium">Contact</a>
             <div class="pt-2">
                 <a href="https://wa.me/8801312546664" target="_blank" class="w-full flex items-center justify-center gap-2 bg-fiverr text-white py-3 rounded-xl font-semibold shadow-lg shadow-fiverr/20">
                     <i class="fab fa-whatsapp text-lg"></i> Let's Talk on WhatsApp
@@ -201,7 +185,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden py-20 lg:py-32 border-b border-zinc-800/60 bg-gradient-to-b from-[#0e0e10] via-[#121216] to-[#0e0e10]">
+    <section class="relative overflow-hidden py-20 lg:py-32 border-b border-zinc-200 dark:border-zinc-800/60 bg-gradient-to-b from-zinc-50 via-white to-zinc-50 dark:from-[#0e0e10] dark:via-[#121216] dark:to-[#0e0e10]">
         <!-- Decorative Animated Glows -->
         <div class="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[28rem] h-[28rem] bg-fiverr/15 rounded-full blur-[120px] pointer-events-none animate-pulse-glow"></div>
         <div class="absolute bottom-10 right-10 w-80 h-80 bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none animate-pulse-glow" style="animation-delay: 2s;"></div>
@@ -212,83 +196,84 @@
                 <!-- Hero Content -->
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left reveal">
                     <!-- Fiverr Pro Seller Badge Style -->
-                    <div class="inline-flex items-center gap-2.5 bg-zinc-900/90 border border-zinc-700/60 px-4 py-2 rounded-full shadow-inner backdrop-blur-md">
-                        <div class="flex text-amber-400 text-xs gap-0.5">
+                    <div class="inline-flex items-center gap-2.5 bg-zinc-100 dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-700/60 px-4 py-2 rounded-full shadow-inner backdrop-blur-md">
+                        <div class="flex text-amber-500 dark:text-amber-400 text-xs gap-0.5">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <span class="text-xs font-semibold uppercase tracking-wider text-zinc-300">Top Rated Studio</span>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-zinc-700 dark:text-zinc-300">Top Rated Studio</span>
                         <span class="w-2 h-2 rounded-full bg-fiverr animate-ping"></span>
                         <span class="text-xs text-fiverr font-semibold">Level 2 / Pro Vibe</span>
                     </div>
 
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                        Cinematic Video Editing That <span class="text-transparent bg-clip-text bg-gradient-to-r from-fiverr via-emerald-400 to-teal-300">Captivates Audiences</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-tight">
+                        Cinematic Video Editing That <span class="text-transparent bg-clip-text bg-gradient-to-r from-fiverr via-emerald-500 to-teal-400">Captivates Audiences</span>
                     </h1>
 
-                    <p class="text-lg text-zinc-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        Welcome to <strong class="text-white">Tosrec Studios</strong>. With over <strong class="text-zinc-200">6+ years of professional experience</strong>, we transform raw footage into breathtaking cinematic masterpieces, engaging travel vlogs, dynamic real estate walkthroughs, and high-converting social media shorts.
+                    <p class="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Welcome to <strong class="text-zinc-900 dark:text-white">Tosrec Studios</strong>. With over <strong class="text-zinc-800 dark:text-zinc-200">6+ years of professional experience</strong>, we transform raw footage into breathtaking cinematic masterpieces, engaging travel vlogs, dynamic real estate walkthroughs, and high-converting social media shorts.
                     </p>
 
                     <!-- CTAs & Stats -->
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="https://wa.me/8801312546664" target="_blank" id="hero-whatsapp-btn" class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#1e1e24] hover:bg-zinc-800 text-white px-8 py-4 rounded-xl font-bold border border-zinc-700/80 shadow-lg hover:border-fiverr/50 hover:scale-[1.02] active:scale-95 transition-all duration-300">
+                        <a href="https://wa.me/8801312546664" target="_blank" id="hero-whatsapp-btn" class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-zinc-900 hover:bg-zinc-800 dark:bg-[#1e1e24] dark:hover:bg-zinc-800 text-white px-8 py-4 rounded-xl font-bold border border-zinc-700/80 shadow-lg hover:border-fiverr/50 hover:scale-[1.02] active:scale-95 transition-all duration-300">
                             <i class="fas fa-paper-plane text-lg text-fiverr"></i>
                             <span id="hero-whatsapp-btn-text">Contact me</span>
                         </a>
-                        <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-zinc-900/80 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 hover:border-zinc-600 px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-0.5">
+                        <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white dark:bg-zinc-900/80 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-200 border border-zinc-300 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-0.5">
                             <span>Explore Services</span>
                             <i class="fas fa-arrow-down text-xs animate-bounce"></i>
                         </a>
                     </div>
 
                     <!-- Quick Trust Bar -->
-                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-zinc-800/80 max-w-lg mx-auto lg:mx-0">
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-zinc-200 dark:border-zinc-800/80 max-w-lg mx-auto lg:mx-0">
                         <div class="group">
-                            <div class="text-2xl font-bold text-white group-hover:text-fiverr transition-colors">6+</div>
-                            <div class="text-xs text-zinc-400">Years Experience</div>
+                            <div class="text-2xl font-bold text-zinc-900 dark:text-white group-hover:text-fiverr transition-colors">6+</div>
+                            <div class="text-xs text-zinc-500 dark:text-zinc-400">Years Experience</div>
                         </div>
                         <div class="group">
-                            <div class="text-2xl font-bold text-white group-hover:text-fiverr transition-colors">450+</div>
-                            <div class="text-xs text-zinc-400">Projects Delivered</div>
+                            <div class="text-2xl font-bold text-zinc-900 dark:text-white group-hover:text-fiverr transition-colors">450+</div>
+                            <div class="text-xs text-zinc-500 dark:text-zinc-400">Projects Delivered</div>
                         </div>
                         <div class="group">
-                            <div class="text-2xl font-bold text-white group-hover:text-fiverr transition-colors">99%</div>
-                            <div class="text-xs text-zinc-400">Client Satisfaction</div>
+                            <div class="text-2xl font-bold text-zinc-900 dark:text-white group-hover:text-fiverr transition-colors">99%</div>
+                            <div class="text-xs text-zinc-500 dark:text-zinc-400">Client Satisfaction</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Hero Visual Card (Floating Showcase Style) -->
                 <div class="lg:col-span-5 reveal delay-200">
-                    <div class="bg-[#18181b]/90 backdrop-blur-xl border border-zinc-800 rounded-2xl p-6 shadow-2xl relative group animate-float hover:border-fiverr/40 transition-colors duration-500">
+                    <div class="bg-white dark:bg-[#18181b]/90 backdrop-blur-xl border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-2xl relative group animate-float hover:border-fiverr/40 transition-colors duration-500">
+                        
                         <!-- Top Banner / Badge -->
                         <div class="absolute -top-3 right-6 bg-gradient-to-r from-fiverr to-emerald-500 text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-lg shadow-fiverr/20">
                             Pro Verified
                         </div>
 
                         <!-- Profile Header Inside Card -->
-                        <div class="flex items-center gap-4 mb-6 pb-6 border-b border-zinc-800/80">
+                        <div class="flex items-center gap-4 mb-6 pb-6 border-b border-zinc-200 dark:border-zinc-800/80">
                             <div class="relative">
                                 <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-fiverr to-emerald-300 p-0.5 shadow-lg shadow-fiverr/20">
                                     <div class="w-full h-full bg-zinc-900 rounded-full flex items-center justify-center text-xl font-bold text-white">
                                         TS
                                     </div>
                                 </div>
-                                <span class="absolute bottom-0 right-0 w-4 h-4 bg-fiverr border-2 border-[#18181b] rounded-full"></span>
+                                <span class="absolute bottom-0 right-0 w-4 h-4 bg-fiverr border-2 border-white dark:border-[#18181b] rounded-full"></span>
                             </div>
                             <div>
-                                <h3 class="font-bold text-lg text-white flex items-center gap-1.5">
+                                <h3 class="font-bold text-lg text-zinc-900 dark:text-white flex items-center gap-1.5">
                                     Tosrec Studios <i class="fas fa-check-circle text-fiverr text-sm" title="Verified Studio"></i>
                                 </h3>
-                                <p class="text-xs text-zinc-400">Elite Video Editing & Post-Production Agency</p>
-                                <div class="flex items-center gap-1 text-xs text-amber-400 mt-1">
+                                <p class="text-xs text-zinc-500 dark:text-zinc-400">Elite Video Editing & Post-Production Agency</p>
+                                <div class="flex items-center gap-1 text-xs text-amber-500 dark:text-amber-400 mt-1">
                                     <i class="fas fa-star"></i>
-                                    <span class="font-bold text-white">5.0</span>
-                                    <span class="text-zinc-500">(320+ reviews)</span>
+                                    <span class="font-bold text-zinc-900 dark:text-white">5.0</span>
+                                    <span class="text-zinc-400 dark:text-zinc-500">(320+ reviews)</span>
                                 </div>
                             </div>
                         </div>
@@ -297,12 +282,14 @@
                         <div class="relative rounded-xl overflow-hidden mb-6 bg-zinc-950 aspect-video flex items-center justify-center border border-zinc-800 group/vid">
                             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent z-10"></div>
                             <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#1dbf73_1px,transparent_1px)] [background-size:16px_16px] group-hover/vid:scale-110 transition-transform duration-700"></div>
+                            
                             <div class="relative z-20 flex items-center justify-center">
                                 <span class="absolute w-16 h-16 rounded-full bg-fiverr/40 animate-ping"></span>
                                 <div class="w-14 h-14 rounded-full bg-fiverr text-white flex items-center justify-center text-xl relative shadow-lg shadow-fiverr/40 group-hover/vid:scale-110 transition-transform duration-300 cursor-pointer">
                                     <i class="fas fa-play ml-1"></i>
                                 </div>
                             </div>
+
                             <div class="absolute bottom-3 left-3 right-3 z-20 flex justify-between items-center text-xs text-zinc-300">
                                 <span class="bg-zinc-900/80 px-2.5 py-1 rounded-md backdrop-blur border border-zinc-800">Reel 2026.mp4</span>
                                 <span class="bg-fiverr/20 text-fiverr px-2.5 py-1 rounded-md backdrop-blur font-semibold border border-fiverr/20">4K Cinematic</span>
@@ -311,58 +298,56 @@
 
                         <!-- Specializations Tags -->
                         <div class="space-y-3">
-                            <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Core Specializations</span>
+                            <span class="text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Core Specializations</span>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white text-xs px-3 py-1.5 rounded-lg border border-zinc-800 transition-colors cursor-default">Cinematic Color Grading</span>
-                                <span class="bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white text-xs px-3 py-1.5 rounded-lg border border-zinc-800 transition-colors cursor-default">Travel & Lifestyle Vlogs</span>
-                                <span class="bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white text-xs px-3 py-1.5 rounded-lg border border-zinc-800 transition-colors cursor-default">Real Estate Tours</span>
-                                <span class="bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white text-xs px-3 py-1.5 rounded-lg border border-zinc-800 transition-colors cursor-default">Reels / Shorts / TikTok</span>
+                                <span class="bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white text-xs px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-800 transition-colors cursor-default">Cinematic Color Grading</span>
+                                <span class="bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white text-xs px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-800 transition-colors cursor-default">Travel & Lifestyle Vlogs</span>
+                                <span class="bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white text-xs px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-800 transition-colors cursor-default">Real Estate Tours</span>
+                                <span class="bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white text-xs px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-800 transition-colors cursor-default">Reels / Shorts / TikTok</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Featured Gigs / Services Section -->
-    <section id="services" class="py-24 bg-[#0e0e10]">
+    <section id="services" class="py-24 bg-zinc-50 dark:bg-[#0e0e10]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
                 <span class="text-fiverr text-xs font-bold uppercase tracking-widest bg-fiverr/10 px-3.5 py-1.5 rounded-full border border-fiverr/20">Our Professional Services</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">Expert Video Editing Gigs</h2>
-                <p class="text-zinc-400 mt-3 text-sm sm:text-base">Designed for creators, brands, and businesses looking for unmatched quality, smooth transitions, and engaging storytelling.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white mt-4">Expert Video Editing Gigs</h2>
+                <p class="text-zinc-600 dark:text-zinc-400 mt-3 text-sm sm:text-base">Designed for creators, brands, and businesses looking for unmatched quality, smooth transitions, and engaging storytelling.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
                 <!-- Gig Card 1 -->
-                <div class="premium-card bg-[#18181b] border border-zinc-800 rounded-2xl overflow-hidden flex flex-col group reveal delay-100">
-                    <div class="h-48 bg-zinc-900 relative overflow-hidden flex items-center justify-center">
-                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-zinc-900 to-zinc-950"></div>
-                        <div class="absolute top-3 left-3 bg-zinc-900/80 text-xs text-zinc-300 px-3 py-1 rounded-full border border-zinc-700 backdrop-blur z-10">
+                <div class="premium-card bg-white dark:bg-[#18181b] border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden flex flex-col group reveal delay-100 shadow-sm dark:shadow-none">
+                    <div class="h-48 bg-zinc-100 dark:bg-zinc-900 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 dark:from-indigo-900/20 via-transparent to-transparent"></div>
+                        <div class="absolute top-3 left-3 bg-white/80 dark:bg-zinc-900/80 text-xs text-zinc-700 dark:text-zinc-300 px-3 py-1 rounded-full border border-zinc-200 dark:border-zinc-700 backdrop-blur z-10">
                             <i class="fas fa-video text-fiverr mr-1"></i> Travel & Lifestyle
                         </div>
-                        <div class="text-zinc-700 group-hover:text-fiverr/40 text-6xl group-hover:scale-110 transition-all duration-500">
+                        <div class="text-zinc-300 dark:text-zinc-700 group-hover:text-fiverr/40 text-6xl group-hover:scale-110 transition-all duration-500">
                             <i class="fas fa-plane-departure"></i>
                         </div>
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center gap-1 text-xs text-amber-400 mb-2">
+                            <div class="flex items-center gap-1 text-xs text-amber-500 dark:text-amber-400 mb-2">
                                 <i class="fas fa-star"></i>
-                                <span class="font-bold text-white">5.0</span>
-                                <span class="text-zinc-500">(142 orders completed)</span>
+                                <span class="font-bold text-zinc-900 dark:text-white">5.0</span>
+                                <span class="text-zinc-400 dark:text-zinc-500">(142 orders completed)</span>
                             </div>
-                            <h3 class="text-lg font-bold text-white group-hover:text-fiverr transition-colors">Travel & Cinematic Vlog Editing</h3>
-                            <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
+                            <h3 class="text-lg font-bold text-zinc-900 dark:text-white group-hover:text-fiverr transition-colors">Travel & Cinematic Vlog Editing</h3>
+                            <p class="text-zinc-600 dark:text-zinc-400 text-sm mt-2 leading-relaxed">
                                 Transform your raw travel footage into cinematic stories with professional sound design, color grading, and seamless pacing.
                             </p>
                         </div>
-                        <div class="pt-6 mt-6 border-t border-zinc-800 flex items-center justify-between">
-                            <span class="text-xs text-zinc-500 font-medium"><i class="far fa-clock mr-1"></i> Fast Delivery</span>
-                            <a href="#contact" class="text-fiverr hover:text-emerald-400 text-sm font-bold inline-flex items-center gap-1.5 group/link">
+                        <div class="pt-6 mt-6 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
+                            <span class="text-xs text-zinc-400 dark:text-zinc-500 font-medium"><i class="far fa-clock mr-1"></i> Fast Delivery</span>
+                            <a href="#contact" class="text-fiverr hover:text-emerald-500 dark:hover:text-emerald-400 text-sm font-bold inline-flex items-center gap-1.5 group/link">
                                 Order / Inquire <i class="fas fa-arrow-right text-xs transform group-hover/link:translate-x-1 transition-transform"></i>
                             </a>
                         </div>
@@ -370,31 +355,31 @@
                 </div>
 
                 <!-- Gig Card 2 -->
-                <div class="premium-card bg-[#18181b] border border-zinc-800 rounded-2xl overflow-hidden flex flex-col group reveal delay-200">
-                    <div class="h-48 bg-zinc-900 relative overflow-hidden flex items-center justify-center">
-                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-zinc-900 to-zinc-950"></div>
-                        <div class="absolute top-3 left-3 bg-zinc-900/80 text-xs text-zinc-300 px-3 py-1 rounded-full border border-zinc-700 backdrop-blur z-10">
+                <div class="premium-card bg-white dark:bg-[#18181b] border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden flex flex-col group reveal delay-200 shadow-sm dark:shadow-none">
+                    <div class="h-48 bg-zinc-100 dark:bg-zinc-900 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/10 dark:from-emerald-900/20 via-transparent to-transparent"></div>
+                        <div class="absolute top-3 left-3 bg-white/80 dark:bg-zinc-900/80 text-xs text-zinc-700 dark:text-zinc-300 px-3 py-1 rounded-full border border-zinc-200 dark:border-zinc-700 backdrop-blur z-10">
                             <i class="fas fa-palette text-fiverr mr-1"></i> Color Grading
                         </div>
-                        <div class="text-zinc-700 group-hover:text-fiverr/40 text-6xl group-hover:scale-110 transition-all duration-500">
+                        <div class="text-zinc-300 dark:text-zinc-700 group-hover:text-fiverr/40 text-6xl group-hover:scale-110 transition-all duration-500">
                             <i class="fas fa-sliders-h"></i>
                         </div>
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center gap-1 text-xs text-amber-400 mb-2">
+                            <div class="flex items-center gap-1 text-xs text-amber-500 dark:text-amber-400 mb-2">
                                 <i class="fas fa-star"></i>
-                                <span class="font-bold text-white">5.0</span>
-                                <span class="text-zinc-500">(98 orders completed)</span>
+                                <span class="font-bold text-zinc-900 dark:text-white">5.0</span>
+                                <span class="text-zinc-400 dark:text-zinc-500">(98 orders completed)</span>
                             </div>
-                            <h3 class="text-lg font-bold text-white group-hover:text-fiverr transition-colors">Cinematic Color Grading & Match</h3>
-                            <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
+                            <h3 class="text-lg font-bold text-zinc-900 dark:text-white group-hover:text-fiverr transition-colors">Cinematic Color Grading & Match</h3>
+                            <p class="text-zinc-600 dark:text-zinc-400 text-sm mt-2 leading-relaxed">
                                 Professional DaVinci Resolve color grading to give your videos a Hollywood film look, mood matching, and skin tone balancing.
                             </p>
                         </div>
-                        <div class="pt-6 mt-6 border-t border-zinc-800 flex items-center justify-between">
-                            <span class="text-xs text-zinc-500 font-medium"><i class="far fa-clock mr-1"></i> DaVinci Resolve</span>
-                            <a href="#contact" class="text-fiverr hover:text-emerald-400 text-sm font-bold inline-flex items-center gap-1.5 group/link">
+                        <div class="pt-6 mt-6 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
+                            <span class="text-xs text-zinc-400 dark:text-zinc-500 font-medium"><i class="far fa-clock mr-1"></i> DaVinci Resolve</span>
+                            <a href="#contact" class="text-fiverr hover:text-emerald-500 dark:hover:text-emerald-400 text-sm font-bold inline-flex items-center gap-1.5 group/link">
                                 Order / Inquire <i class="fas fa-arrow-right text-xs transform group-hover/link:translate-x-1 transition-transform"></i>
                             </a>
                         </div>
@@ -402,57 +387,56 @@
                 </div>
 
                 <!-- Gig Card 3 -->
-                <div class="premium-card bg-[#18181b] border border-zinc-800 rounded-2xl overflow-hidden flex flex-col group reveal delay-300">
-                    <div class="h-48 bg-zinc-900 relative overflow-hidden flex items-center justify-center">
-                        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-zinc-900 to-zinc-950"></div>
-                        <div class="absolute top-3 left-3 bg-zinc-900/80 text-xs text-zinc-300 px-3 py-1 rounded-full border border-zinc-700 backdrop-blur z-10">
+                <div class="premium-card bg-white dark:bg-[#18181b] border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden flex flex-col group reveal delay-300 shadow-sm dark:shadow-none">
+                    <div class="h-48 bg-zinc-100 dark:bg-zinc-900 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 dark:from-purple-900/20 via-transparent to-transparent"></div>
+                        <div class="absolute top-3 left-3 bg-white/80 dark:bg-zinc-900/80 text-xs text-zinc-700 dark:text-zinc-300 px-3 py-1 rounded-full border border-zinc-200 dark:border-zinc-700 backdrop-blur z-10">
                             <i class="fas fa-mobile-alt text-fiverr mr-1"></i> Short-Form Content
                         </div>
-                        <div class="text-zinc-700 group-hover:text-fiverr/40 text-6xl group-hover:scale-110 transition-all duration-500">
+                        <div class="text-zinc-300 dark:text-zinc-700 group-hover:text-fiverr/40 text-6xl group-hover:scale-110 transition-all duration-500">
                             <i class="fas fa-bolt"></i>
                         </div>
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center gap-1 text-xs text-amber-400 mb-2">
+                            <div class="flex items-center gap-1 text-xs text-amber-500 dark:text-amber-400 mb-2">
                                 <i class="fas fa-star"></i>
-                                <span class="font-bold text-white">5.0</span>
-                                <span class="text-zinc-500">(180 orders completed)</span>
+                                <span class="font-bold text-zinc-900 dark:text-white">5.0</span>
+                                <span class="text-zinc-400 dark:text-zinc-500">(180 orders completed)</span>
                             </div>
-                            <h3 class="text-lg font-bold text-white group-hover:text-fiverr transition-colors">Viral TikToks, Reels & Shorts</h3>
-                            <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
+                            <h3 class="text-lg font-bold text-zinc-900 dark:text-white group-hover:text-fiverr transition-colors">Viral TikToks, Reels & Shorts</h3>
+                            <p class="text-zinc-600 dark:text-zinc-400 text-sm mt-2 leading-relaxed">
                                 High-retention vertical video editing featuring Alex Hormozi style animated captions, sound effects, B-roll, and emojis.
                             </p>
                         </div>
-                        <div class="pt-6 mt-6 border-t border-zinc-800 flex items-center justify-between">
-                            <span class="text-xs text-zinc-500 font-medium"><i class="far fa-clock mr-1"></i> 24h Turnaround</span>
-                            <a href="#contact" class="text-fiverr hover:text-emerald-400 text-sm font-bold inline-flex items-center gap-1.5 group/link">
+                        <div class="pt-6 mt-6 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
+                            <span class="text-xs text-zinc-400 dark:text-zinc-500 font-medium"><i class="far fa-clock mr-1"></i> 24h Turnaround</span>
+                            <a href="#contact" class="text-fiverr hover:text-emerald-500 dark:hover:text-emerald-400 text-sm font-bold inline-flex items-center gap-1.5 group/link">
                                 Order / Inquire <i class="fas fa-arrow-right text-xs transform group-hover/link:translate-x-1 transition-transform"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-24 bg-[#121216] border-t border-b border-zinc-800/60">
+    <section id="portfolio" class="py-24 bg-white dark:bg-[#121216] border-t border-b border-zinc-200 dark:border-zinc-800/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal">
                 <div>
                     <span class="text-fiverr text-xs font-bold uppercase tracking-widest bg-fiverr/10 px-3.5 py-1.5 rounded-full border border-fiverr/20">Our Work</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">Featured Portfolio Projects</h2>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white mt-4">Featured Portfolio Projects</h2>
                 </div>
-                <p class="text-zinc-400 max-w-md mt-4 md:mt-0 text-sm">
+                <p class="text-zinc-600 dark:text-zinc-400 max-w-md mt-4 md:mt-0 text-sm">
                     A glimpse of our recent work across travel vlogs, real estate showcases, and commercial brand edits.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Portfolio Item 1 -->
-                <div class="premium-card group relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-zinc-800 cursor-pointer reveal delay-100">
+                <div class="premium-card group relative rounded-2xl overflow-hidden aspect-video bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 cursor-pointer reveal delay-100">
                     <div class="absolute inset-0 bg-[radial-gradient(#1dbf73_1px,transparent_1px)] [background-size:20px_20px] opacity-10 group-hover:scale-110 transition-transform duration-700"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent z-10 opacity-80 group-hover:opacity-90 transition-opacity"></div>
                     <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-all transform scale-90 group-hover:scale-100 duration-300">
@@ -467,7 +451,7 @@
                 </div>
 
                 <!-- Portfolio Item 2 -->
-                <div class="premium-card group relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-zinc-800 cursor-pointer reveal delay-200">
+                <div class="premium-card group relative rounded-2xl overflow-hidden aspect-video bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 cursor-pointer reveal delay-200">
                     <div class="absolute inset-0 bg-[radial-gradient(#1dbf73_1px,transparent_1px)] [background-size:20px_20px] opacity-10 group-hover:scale-110 transition-transform duration-700"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent z-10 opacity-80 group-hover:opacity-90 transition-opacity"></div>
                     <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-all transform scale-90 group-hover:scale-100 duration-300">
@@ -482,7 +466,7 @@
                 </div>
 
                 <!-- Portfolio Item 3 -->
-                <div class="premium-card group relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-zinc-800 cursor-pointer reveal delay-300">
+                <div class="premium-card group relative rounded-2xl overflow-hidden aspect-video bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 cursor-pointer reveal delay-300">
                     <div class="absolute inset-0 bg-[radial-gradient(#1dbf73_1px,transparent_1px)] [background-size:20px_20px] opacity-10 group-hover:scale-110 transition-transform duration-700"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent z-10 opacity-80 group-hover:opacity-90 transition-opacity"></div>
                     <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-all transform scale-90 group-hover:scale-100 duration-300">
@@ -500,256 +484,247 @@
     </section>
 
     <!-- About & Experience Section -->
-    <section id="about" class="py-24 bg-[#0e0e10]">
+    <section id="about" class="py-24 bg-zinc-50 dark:bg-[#0e0e10]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
                 <div class="lg:col-span-6 space-y-6 reveal">
                     <span class="text-fiverr text-xs font-bold uppercase tracking-widest bg-fiverr/10 px-3.5 py-1.5 rounded-full border border-fiverr/20">About Tosrec Studios</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white leading-tight">
                         Crafting Visual Stories with Precision & Passion
                     </h2>
-                    <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">
-                        Founded by veteran video editor <strong class="text-white">Makin Mushir</strong> (fiverr profile <a href="https://www.fiverr.com/makin_mushir" target="_blank" class="text-fiverr underline hover:text-emerald-400">makin_mushir</a>), <strong class="text-white">Tosrec Studios</strong> has grown into an elite post-production powerhouse. We combine technical wizardry with creative storytelling to make your content stand out in a crowded digital world.
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm sm:text-base">
+                        Founded by veteran video editor <strong class="text-zinc-900 dark:text-white">Makin Mushir</strong> (fiverr profile <a href="https://www.fiverr.com/makin_mushir" target="_blank" class="text-fiverr underline hover:text-emerald-500">makin_mushir</a>), <strong class="text-zinc-900 dark:text-white">Tosrec Studios</strong> has grown into an elite post-production powerhouse. We combine technical wizardry with creative storytelling to make your content stand out in a crowded digital world.
                     </p>
-                    <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm sm:text-base">
                         Whether you need dynamic jump-cuts for YouTube, exquisite color grades for feature docs, or fast-paced social media hooks, our studio delivers studio-grade polish on time, every time.
                     </p>
 
                     <!-- Stats Row -->
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
-                        <div class="premium-card bg-[#18181b] border border-zinc-800 p-4 rounded-xl">
+                        <div class="premium-card bg-white dark:bg-[#18181b] border border-zinc-200 dark:border-zinc-800 p-4 rounded-xl shadow-sm dark:shadow-none">
                             <div class="text-xl font-bold text-fiverr">6+ Years</div>
-                            <div class="text-xs text-zinc-400 mt-1">Professional Practice</div>
+                            <div class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Professional Practice</div>
                         </div>
-                        <div class="premium-card bg-[#18181b] border border-zinc-800 p-4 rounded-xl">
+                        <div class="premium-card bg-white dark:bg-[#18181b] border border-zinc-200 dark:border-zinc-800 p-4 rounded-xl shadow-sm dark:shadow-none">
                             <div class="text-xl font-bold text-fiverr">100%</div>
-                            <div class="text-xs text-zinc-400 mt-1">On-Time Delivery</div>
+                            <div class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">On-Time Delivery</div>
                         </div>
-                        <div class="premium-card bg-[#18181b] border border-zinc-800 p-4 rounded-xl col-span-2 sm:col-span-1">
+                        <div class="premium-card bg-white dark:bg-[#18181b] border border-zinc-200 dark:border-zinc-800 p-4 rounded-xl col-span-2 sm:col-span-1 shadow-sm dark:shadow-none">
                             <div class="text-xl font-bold text-fiverr">24/7</div>
-                            <div class="text-xs text-zinc-400 mt-1">Client Support</div>
+                            <div class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Client Support</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Tools & Software Stack Card -->
                 <div class="lg:col-span-6 reveal delay-200" id="skills-container">
-                    <div class="premium-card bg-[#18181b] border border-zinc-800 rounded-2xl p-8 space-y-6 shadow-xl">
-                        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                    <div class="premium-card bg-white dark:bg-[#18181b] border border-zinc-200 dark:border-zinc-800 rounded-2xl p-8 space-y-6 shadow-xl">
+                        <h3 class="text-xl font-bold text-zinc-900 dark:text-white flex items-center gap-2">
                             <i class="fas fa-tools text-fiverr"></i> Industry-Standard Tool Stack
                         </h3>
-                        <p class="text-xs text-zinc-400">We utilize the absolute best software and hardware workflows in the industry to ensure pristine 4K/8K rendering and color accuracy.</p>
+                        <p class="text-xs text-zinc-500 dark:text-zinc-400">We utilize the absolute best software and hardware workflows in the industry to ensure pristine 4K/8K rendering and color accuracy.</p>
 
                         <div class="space-y-4">
                             <!-- Tool 1 -->
                             <div>
                                 <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-zinc-200"><i class="fab fa-adobe text-red-500 mr-2"></i> Adobe Premiere Pro</span>
+                                    <span class="text-zinc-700 dark:text-zinc-200"><i class="fab fa-adobe text-red-500 mr-2"></i> Adobe Premiere Pro</span>
                                     <span class="text-fiverr">Expert (100%)</span>
                                 </div>
-                                <div class="w-full bg-zinc-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-zinc-800">
+                                <div class="w-full bg-zinc-100 dark:bg-zinc-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-zinc-200 dark:border-zinc-800">
                                     <div class="skill-bar bg-gradient-to-r from-fiverr to-emerald-400 h-full rounded-full" data-width="100%"></div>
                                 </div>
                             </div>
-
                             <!-- Tool 2 -->
                             <div>
                                 <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-zinc-200"><i class="fas fa-film text-amber-500 mr-2"></i> color grading with DaVinci Resolve Studio</span>
+                                    <span class="text-zinc-700 dark:text-zinc-200"><i class="fas fa-film text-amber-500 mr-2"></i> color grading with DaVinci Resolve Studio</span>
                                     <span class="text-fiverr">Expert (100%)</span>
                                 </div>
-                                <div class="w-full bg-zinc-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-zinc-800">
+                                <div class="w-full bg-zinc-100 dark:bg-zinc-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-zinc-200 dark:border-zinc-800">
                                     <div class="skill-bar bg-gradient-to-r from-fiverr to-emerald-400 h-full rounded-full" data-width="100%"></div>
                                 </div>
                             </div>
-
                             <!-- Tool 3 -->
                             <div>
                                 <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-zinc-200"><i class="fab fa-adobe text-purple-500 mr-2"></i> Adobe After Effects</span>
+                                    <span class="text-zinc-700 dark:text-zinc-200"><i class="fab fa-adobe text-purple-500 mr-2"></i> Adobe After Effects</span>
                                     <span class="text-fiverr">Advanced (95%)</span>
                                 </div>
-                                <div class="w-full bg-zinc-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-zinc-800">
+                                <div class="w-full bg-zinc-100 dark:bg-zinc-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-zinc-200 dark:border-zinc-800">
                                     <div class="skill-bar bg-gradient-to-r from-fiverr to-emerald-400 h-full rounded-full" data-width="95%"></div>
                                 </div>
                             </div>
-
-                                <!-- Tool 4 -->
+                            <!-- Tool 4 -->
                             <div>
                                 <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-zinc-200"><i class="fab fa-adobe text-purple-500 mr-2"></i> Sound Design</span>
+                                    <span class="text-zinc-700 dark:text-zinc-200"><i class="fab fa-adobe text-purple-500 mr-2"></i> Sound Design</span>
                                     <span class="text-fiverr">Advanced (100%)</span>
                                 </div>
-                                <div class="w-full bg-zinc-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-zinc-800">
+                                <div class="w-full bg-zinc-100 dark:bg-zinc-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-zinc-200 dark:border-zinc-800">
                                     <div class="skill-bar bg-gradient-to-r from-fiverr to-emerald-400 h-full rounded-full" data-width="100%"></div>
                                 </div>
                             </div>
-
                             <!-- Tool 5 -->
                             <div>
                                 <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-zinc-200"><i class="fas fa-desktop text-emerald-400 mr-2"></i> CapCut PC</span>
+                                    <span class="text-zinc-700 dark:text-zinc-200"><i class="fas fa-desktop text-emerald-400 mr-2"></i> CapCut PC</span>
                                     <span class="text-fiverr">Expert (96%)</span>
                                 </div>
-                                <div class="w-full bg-zinc-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-zinc-800">
+                                <div class="w-full bg-zinc-100 dark:bg-zinc-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-zinc-200 dark:border-zinc-800">
                                     <div class="skill-bar bg-gradient-to-r from-fiverr to-emerald-400 h-full rounded-full" data-width="96%"></div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
+                        <div class="pt-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between text-xs text-zinc-500 dark:text-zinc-400">
                             <span>Reference Profile: <a href="https://www.fiverr.com/makin_mushir" target="_blank" class="text-fiverr hover:underline">makin_mushir</a></span>
                             <span class="bg-fiverr/10 text-fiverr px-2.5 py-1 rounded-md font-medium border border-fiverr/20">Verified Pro</span>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Testimonials / Client Feedback -->
-    <section id="testimonials" class="py-24 bg-[#121216] border-t border-b border-zinc-800/60">
+    <section id="testimonials" class="py-24 bg-white dark:bg-[#121216] border-t border-b border-zinc-200 dark:border-zinc-800/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
                 <span class="text-fiverr text-xs font-bold uppercase tracking-widest bg-fiverr/10 px-3.5 py-1.5 rounded-full border border-fiverr/20">Client Feedback</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">What Our Clients Say</h2>
-                <p class="text-zinc-400 mt-3 text-sm sm:text-base">Read authentic reviews from creators and brands who partnered with Tosrec Studios.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white mt-4">What Our Clients Say</h2>
+                <p class="text-zinc-600 dark:text-zinc-400 mt-3 text-sm sm:text-base">Read authentic reviews from creators and brands who partnered with Tosrec Studios.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
                 <!-- Testimonial 1 -->
-                <div class="premium-card bg-[#18181b] border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between relative reveal delay-100">
+                <div class="premium-card bg-zinc-50 dark:bg-[#18181b] border border-zinc-200 dark:border-zinc-800 p-8 rounded-2xl flex flex-col justify-between relative reveal delay-100 shadow-sm dark:shadow-none">
                     <div>
-                        <div class="flex text-amber-400 text-sm gap-1 mb-4">
+                        <div class="flex text-amber-500 dark:text-amber-400 text-sm gap-1 mb-4">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="text-zinc-300 text-sm italic leading-relaxed">
+                        <p class="text-zinc-700 dark:text-zinc-300 text-sm italic leading-relaxed">
                             "Tosrec Studios completely transformed my travel channel. Their cinematic color grading and storytelling pacing boosted my viewer retention by 45%. Absolute professionals!"
                         </p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-zinc-800 flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center font-bold text-fiverr border border-zinc-700">
+                    <div class="mt-8 pt-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center font-bold text-fiverr border border-zinc-300 dark:border-zinc-700">
                             JD
                         </div>
                         <div>
-                            <h4 class="font-bold text-white text-sm">Jonathan Davis</h4>
+                            <h4 class="font-bold text-zinc-900 dark:text-white text-sm">Jonathan Davis</h4>
                             <span class="text-xs text-zinc-500">Travel YouTuber (150k Subs)</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="premium-card bg-[#18181b] border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between relative reveal delay-200">
+                <div class="premium-card bg-zinc-50 dark:bg-[#18181b] border border-zinc-200 dark:border-zinc-800 p-8 rounded-2xl flex flex-col justify-between relative reveal delay-200 shadow-sm dark:shadow-none">
                     <div>
-                        <div class="flex text-amber-400 text-sm gap-1 mb-4">
+                        <div class="flex text-amber-500 dark:text-amber-400 text-sm gap-1 mb-4">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="text-zinc-300 text-sm italic leading-relaxed">
+                        <p class="text-zinc-700 dark:text-zinc-300 text-sm italic leading-relaxed">
                             "Working with Makin and the Tosrec team was seamless. The reels they edited for our real estate listings generated massive engagement and inquiries. Will hire again!"
                         </p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-zinc-800 flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center font-bold text-fiverr border border-zinc-700">
+                    <div class="mt-8 pt-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center font-bold text-fiverr border border-zinc-300 dark:border-zinc-700">
                             SR
                         </div>
                         <div>
-                            <h4 class="font-bold text-white text-sm">Sophia Roberts</h4>
+                            <h4 class="font-bold text-zinc-900 dark:text-white text-sm">Sophia Roberts</h4>
                             <span class="text-xs text-zinc-500">Real Estate Agency Director</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Testimonial 3 -->
-                <div class="premium-card bg-[#18181b] border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between relative reveal delay-300">
+                <div class="premium-card bg-zinc-50 dark:bg-[#18181b] border border-zinc-200 dark:border-zinc-800 p-8 rounded-2xl flex flex-col justify-between relative reveal delay-300 shadow-sm dark:shadow-none">
                     <div>
-                        <div class="flex text-amber-400 text-sm gap-1 mb-4">
+                        <div class="flex text-amber-500 dark:text-amber-400 text-sm gap-1 mb-4">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="text-zinc-300 text-sm italic leading-relaxed">
+                        <p class="text-zinc-700 dark:text-zinc-300 text-sm italic leading-relaxed">
                             "The turnaround time was lightning fast, and the quality surpassed my expectations. If you need clean cuts, sound effects, and professional color, look no further."
                         </p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-zinc-800 flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center font-bold text-fiverr border border-zinc-700">
+                    <div class="mt-8 pt-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center font-bold text-fiverr border border-zinc-300 dark:border-zinc-700">
                             AL
                         </div>
                         <div>
-                            <h4 class="font-bold text-white text-sm">Alex Lin</h4>
+                            <h4 class="font-bold text-zinc-900 dark:text-white text-sm">Alex Lin</h4>
                             <span class="text-xs text-zinc-500">Podcast & Shorts Creator</span>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-[#0e0e10] relative">
+    <section id="contact" class="py-24 bg-zinc-50 dark:bg-[#0e0e10] relative">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-[#18181b]/90 backdrop-blur-xl border border-zinc-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden reveal">
+            <div class="bg-white dark:bg-[#18181b]/90 backdrop-blur-xl border border-zinc-200 dark:border-zinc-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden reveal">
                 <!-- Background ambient light -->
                 <div class="absolute -top-24 -right-24 w-80 h-80 bg-fiverr/15 rounded-full blur-[100px] pointer-events-none animate-pulse-glow"></div>
                 <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none animate-pulse-glow" style="animation-delay: 2s;"></div>
-
+                
                 <div class="text-center max-w-2xl mx-auto mb-12 relative z-10">
                     <span class="text-fiverr text-xs font-bold uppercase tracking-widest bg-fiverr/10 px-3.5 py-1.5 rounded-full border border-fiverr/20">Get In Touch</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">Start Your Project With Us</h2>
-                    <p class="text-zinc-400 mt-2 text-sm sm:text-base">Contact us directly via WhatsApp or launch your preferred email inbox in one tap.</p>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white mt-4">Start Your Project With Us</h2>
+                    <p class="text-zinc-600 dark:text-zinc-400 mt-2 text-sm sm:text-base">Contact us directly via WhatsApp or launch your preferred email inbox in one tap.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch relative z-10">
-                    
                     <!-- Direct WhatsApp Option with Hover Number Reveal -->
-               <!-- Direct WhatsApp Option with Hover Number Reveal -->
-<div class="premium-card bg-zinc-900/90 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between text-center group">
-    <div>
-        <div class="w-16 h-16 rounded-2xl bg-zinc-800/80 border border-zinc-700/60 text-fiverr flex items-center justify-center text-3xl mb-5 mx-auto group-hover:scale-110 group-hover:bg-fiverr group-hover:text-white transition-all duration-300 shadow-lg">
-            <i class="fab fa-whatsapp"></i>
-        </div>
-        <h3 class="text-xl font-bold text-white">Chat on WhatsApp</h3>
-        <p class="text-zinc-400 text-xs mt-1.5">Average response time: 30 minutes</p>
-        <div class="mt-3 inline-flex items-center gap-2 text-xs text-zinc-400 bg-zinc-950/70 px-3.5 py-2 rounded-lg border border-zinc-800/80">
-            <span class="w-2 h-2 rounded-full bg-fiverr animate-ping"></span>
-            <span>Direct line to Production Team</span>
-        </div>
-    </div>
-    <div class="mt-5 w-full">
-        <a href="https://wa.me/8801312546664" target="_blank" id="whatsapp-btn" class="btn-shimmer w-full flex items-center justify-center gap-2.5 bg-[#1e1e24] hover:bg-fiverr text-zinc-100 hover:text-white font-semibold py-4 px-6 rounded-xl border border-zinc-700/80 hover:border-fiverr shadow-lg transition-all duration-300 active:scale-95">
-            <i class="fas fa-paper-plane text-lg"></i>
-            <span id="whatsapp-btn-text">Contact me</span>
-        </a>
-    </div>
-</div>
-                    <!-- Premium Multi-Inbox Email Launcher Card -->
-                    <div class="premium-card bg-zinc-900/90 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between text-center group">
+                    <div class="premium-card bg-zinc-50 dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 p-8 rounded-2xl flex flex-col justify-between text-center group shadow-sm dark:shadow-none">
                         <div>
-                            <div class="w-16 h-16 rounded-2xl bg-zinc-800/80 border border-zinc-700/60 text-fiverr flex items-center justify-center text-2xl mb-5 mx-auto group-hover:scale-110 group-hover:bg-fiverr group-hover:text-white transition-all duration-300 shadow-lg">
+                            <div class="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700/60 text-fiverr flex items-center justify-center text-3xl mb-5 mx-auto group-hover:scale-110 group-hover:bg-fiverr group-hover:text-white transition-all duration-300 shadow-lg">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-zinc-900 dark:text-white">Chat on WhatsApp</h3>
+                            <p class="text-zinc-500 dark:text-zinc-400 text-xs mt-1.5">Average response time: 30 minutes</p>
+                            <div class="mt-3 inline-flex items-center gap-2 text-xs text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-950/70 px-3.5 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800/80">
+                                <span class="w-2 h-2 rounded-full bg-fiverr animate-ping"></span>
+                                <span>Direct line to Production Team</span>
+                            </div>
+                        </div>
+                        <div class="mt-5 w-full">
+                            <a href="https://wa.me/8801312546664" target="_blank" id="whatsapp-btn" class="btn-shimmer w-full flex items-center justify-center gap-2.5 bg-zinc-900 hover:bg-fiverr dark:bg-[#1e1e24] dark:hover:bg-fiverr text-zinc-100 hover:text-white font-semibold py-4 px-6 rounded-xl border border-zinc-700/80 hover:border-fiverr shadow-lg transition-all duration-300 active:scale-95">
+                                <i class="fas fa-paper-plane text-lg"></i>
+                                <span id="whatsapp-btn-text">Contact me</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Premium Multi-Inbox Email Launcher Card -->
+                    <div class="premium-card bg-zinc-50 dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 p-8 rounded-2xl flex flex-col justify-between text-center group shadow-sm dark:shadow-none">
+                        <div>
+                            <div class="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700/60 text-fiverr flex items-center justify-center text-2xl mb-5 mx-auto group-hover:scale-110 group-hover:bg-fiverr group-hover:text-white transition-all duration-300 shadow-lg">
                                 <i class="far fa-envelope"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white">Email Us Directly</h3>
-                            <p class="text-zinc-400 text-xs mt-1.5">Choose department & open directly in any inbox</p>
+                            <h3 class="text-xl font-bold text-zinc-900 dark:text-white">Email Us Directly</h3>
+                            <p class="text-zinc-500 dark:text-zinc-400 text-xs mt-1.5">Choose department & open directly in any inbox</p>
 
                             <!-- Interactive Department Selector Pills -->
-                            <div class="grid grid-cols-2 gap-2.5 mt-5 bg-zinc-950/80 p-1.5 rounded-xl border border-zinc-800/80">
+                            <div class="grid grid-cols-2 gap-2.5 mt-5 bg-zinc-200/60 dark:bg-zinc-950/80 p-1.5 rounded-xl border border-zinc-200 dark:border-zinc-800/80">
                                 <button type="button" onclick="selectEmailDept('contact@tosrec.com', 'General / Business Inquiry')" id="dept-general" class="email-dept-btn active-dept py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 bg-fiverr text-white shadow">
                                     General / Business
                                 </button>
-                                <button type="button" onclick="selectEmailDept('support@tosrec.com', 'Client Support Request')" id="dept-support" class="email-dept-btn py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 text-zinc-400 hover:text-white">
+                                <button type="button" onclick="selectEmailDept('support@tosrec.com', 'Client Support Request')" id="dept-support" class="email-dept-btn py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white">
                                     Client Support
                                 </button>
                             </div>
 
                             <!-- Selected Email Display + Quick Copy -->
-                            <div class="mt-3 flex items-center justify-between bg-[#18181b] border border-zinc-800 rounded-xl px-4 py-2.5">
-                                <div class="flex items-center gap-2 text-xs text-zinc-300 truncate">
+                            <div class="mt-3 flex items-center justify-between bg-white dark:bg-[#18181b] border border-zinc-200 dark:border-zinc-800 rounded-xl px-4 py-2.5">
+                                <div class="flex items-center gap-2 text-xs text-zinc-700 dark:text-zinc-300 truncate">
                                     <span class="w-2 h-2 rounded-full bg-fiverr shrink-0"></span>
-                                    <span id="selected-email-display" class="font-mono font-medium truncate text-lg">contact@tosrec.com</span>
+                                    <span id="selected-email-display" class="font-mono font-medium truncate text-base">contact@tosrec.com</span>
                                 </div>
-                                <button type="button" onclick="copySelectedEmail()" class="text-xs text-zinc-400 hover:text-fiverr font-semibold flex items-center gap-1.5 pl-3 border-l border-zinc-800 transition-colors shrink-0" title="Copy Email Address">
+                                <button type="button" onclick="copySelectedEmail()" class="text-xs text-zinc-500 dark:text-zinc-400 hover:text-fiverr font-semibold flex items-center gap-1.5 pl-3 border-l border-zinc-200 dark:border-zinc-800 transition-colors shrink-0" title="Copy Email Address">
                                     <i id="copy-icon" class="far fa-copy"></i>
                                     <span id="copy-btn-text">Copy</span>
                                 </button>
@@ -766,58 +741,52 @@
 
                             <!-- Webmail Direct Shortcuts (Gmail, Outlook, Yahoo) -->
                             <div class="pt-1">
-                                <span class="block text-[11px] text-zinc-500 uppercase tracking-wider font-semibold mb-2">Or compose directly in webmail:</span>
+                                <span class="block text-[11px] text-zinc-400 dark:text-zinc-500 uppercase tracking-wider font-semibold mb-2">Or compose directly in webmail:</span>
                                 <div class="grid grid-cols-3 gap-2">
-                                    <a id="gmail-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@tosrec.com&su=General%20%2F%20Business%20Inquiry%20-%20Tosrec%20Studios" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 bg-[#18181b] hover:bg-zinc-800 border border-zinc-800 hover:border-red-500/50 text-zinc-300 hover:text-white py-2.5 px-3 rounded-xl text-xs font-medium transition-all duration-200 hover:-translate-y-0.5">
-                                        <i class="fab fa-google text-red-400"></i>
+                                    <a id="gmail-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@tosrec.com&su=General%20%2F%20Business%20Inquiry%20-%20Tosrec%20Studios" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 bg-zinc-100 dark:bg-[#18181b] hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 hover:border-red-500/50 text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white py-2.5 px-3 rounded-xl text-xs font-medium transition-all duration-200 hover:-translate-y-0.5">
+                                        <i class="fab fa-google text-red-500 dark:text-red-400"></i>
                                         <span>Gmail</span>
                                     </a>
-                                    <a id="outlook-link" href="https://outlook.office.com/mail/deeplink/compose?to=contact@tosrec.com&subject=General%20%2F%20Business%20Inquiry%20-%20Tosrec%20Studios" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 bg-[#18181b] hover:bg-zinc-800 border border-zinc-800 hover:border-sky-500/50 text-zinc-300 hover:text-white py-2.5 px-3 rounded-xl text-xs font-medium transition-all duration-200 hover:-translate-y-0.5">
-                                        <i class="fab fa-microsoft text-sky-400"></i>
+                                    <a id="outlook-link" href="https://outlook.office.com/mail/deeplink/compose?to=contact@tosrec.com&subject=General%20%2F%20Business%20Inquiry%20-%20Tosrec%20Studios" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 bg-zinc-100 dark:bg-[#18181b] hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 hover:border-sky-500/50 text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white py-2.5 px-3 rounded-xl text-xs font-medium transition-all duration-200 hover:-translate-y-0.5">
+                                        <i class="fab fa-microsoft text-sky-500 dark:text-sky-400"></i>
                                         <span>Outlook</span>
                                     </a>
-                                    <a id="yahoo-link" href="https://compose.mail.yahoo.com/?to=contact@tosrec.com&subj=General%20%2F%20Business%20Inquiry%20-%20Tosrec%20Studios" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 bg-[#18181b] hover:bg-zinc-800 border border-zinc-800 hover:border-purple-500/50 text-zinc-300 hover:text-white py-2.5 px-3 rounded-xl text-xs font-medium transition-all duration-200 hover:-translate-y-0.5">
-                                        <i class="fab fa-yahoo text-purple-400"></i>
+                                    <a id="yahoo-link" href="https://compose.mail.yahoo.com/?to=contact@tosrec.com&subj=General%20%2F%20Business%20Inquiry%20-%20Tosrec%20Studios" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 bg-zinc-100 dark:bg-[#18181b] hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 hover:border-purple-500/50 text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white py-2.5 px-3 rounded-xl text-xs font-medium transition-all duration-200 hover:-translate-y-0.5">
+                                        <i class="fab fa-yahoo text-purple-500 dark:text-purple-400"></i>
                                         <span>Yahoo</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#0b0b0d] border-t border-zinc-800 py-12">
+    <footer class="bg-zinc-100 dark:bg-[#0b0b0d] border-t border-zinc-200 dark:border-zinc-800 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-            
             <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-fiverr flex items-center justify-center text-white font-bold text-sm shadow-md shadow-fiverr/20">
                     T
                 </div>
-                <span class="text-lg font-bold tracking-tight text-white">Tosrec <span class="text-fiverr">Studios</span></span>
+                <span class="text-lg font-bold tracking-tight text-zinc-900 dark:text-white">Tosrec <span class="text-fiverr">Studios</span></span>
             </div>
-
-            <p class="text-xs text-zinc-500">
+            <p class="text-xs text-zinc-500 dark:text-zinc-500">
                 &copy; 2026 Tosrec Studios. All rights reserved. Professional Video Editing Agency inspired by Fiverr seller profile (<a href="https://www.fiverr.com/makin_mushir" target="_blank" class="hover:text-fiverr underline">makin_mushir</a>).
             </p>
-
-            <div class="flex items-center gap-4 text-zinc-400">
-                <a href="https://wa.me/8801312546664" target="_blank" class="w-9 h-9 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:text-fiverr hover:border-fiverr hover:-translate-y-0.5 transition-all">
+            <div class="flex items-center gap-4 text-zinc-600 dark:text-zinc-400">
+                <a href="https://wa.me/8801312546664" target="_blank" class="w-9 h-9 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center hover:text-fiverr hover:border-fiverr hover:-translate-y-0.5 transition-all">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="mailto:contact@tosrec.com" class="w-9 h-9 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:text-fiverr hover:border-fiverr hover:-translate-y-0.5 transition-all">
+                <a href="mailto:contact@tosrec.com" class="w-9 h-9 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center hover:text-fiverr hover:border-fiverr hover:-translate-y-0.5 transition-all">
                     <i class="far fa-envelope"></i>
                 </a>
-                <a href="https://www.fiverr.com/makin_mushir" target="_blank" class="w-9 h-9 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:text-fiverr hover:border-fiverr hover:-translate-y-0.5 transition-all" title="Fiverr Profile">
+                <a href="https://www.fiverr.com/makin_mushir" target="_blank" class="w-9 h-9 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center hover:text-fiverr hover:border-fiverr hover:-translate-y-0.5 transition-all" title="Fiverr Profile">
                     <i class="fas fa-globe"></i>
                 </a>
             </div>
-
         </div>
     </footer>
 
@@ -826,7 +795,7 @@
         // 1. Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-
+        
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
@@ -855,7 +824,6 @@
 
         // 3. Multi-Inbox Email Department Switcher & Direct Links
         let currentEmail = 'contact@tosrec.com';
-
         function selectEmailDept(email, subjectTitle) {
             currentEmail = email;
             document.getElementById('selected-email-display').textContent = email;
@@ -866,10 +834,10 @@
 
             if (email === 'contact@tosrec.com') {
                 generalBtn.className = 'email-dept-btn py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 bg-fiverr text-white shadow';
-                supportBtn.className = 'email-dept-btn py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 text-zinc-400 hover:text-white';
+                supportBtn.className = 'email-dept-btn py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white';
             } else {
                 supportBtn.className = 'email-dept-btn py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 bg-fiverr text-white shadow';
-                generalBtn.className = 'email-dept-btn py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 text-zinc-400 hover:text-white';
+                generalBtn.className = 'email-dept-btn py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white';
             }
 
             // Update all inbox links dynamically
@@ -898,6 +866,7 @@
 
             btnText.textContent = 'Copied!';
             copyIcon.className = 'fas fa-check text-fiverr';
+
             setTimeout(() => {
                 btnText.textContent = 'Copy';
                 copyIcon.className = 'far fa-copy';
@@ -934,31 +903,34 @@
             const skillsContainer = document.getElementById('skills-container');
             if (skillsContainer) skillObserver.observe(skillsContainer);
         });
-    </script>
-    <script>
-// Dark & Light Mode Toggle Logic
-const themeToggleBtn = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
-const htmlElement = document.documentElement;
 
-if (localStorage.getItem('theme') === 'light') {
-    htmlElement.classList.remove('dark');
-    if (themeIcon) themeIcon.className = 'fas fa-moon text-zinc-400';
-}
+        // 6. Dark & Light Mode Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
 
-if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-        htmlElement.classList.toggle('dark');
-        
-        if (htmlElement.classList.contains('dark')) {
-            localStorage.setItem('theme', 'dark');
-            if (themeIcon) themeIcon.className = 'fas fa-sun text-amber-400';
+        // On page load check saved theme
+        if (localStorage.getItem('theme') === 'light') {
+            htmlElement.classList.remove('dark');
+            if (themeIcon) themeIcon.className = 'fas fa-moon text-zinc-500 dark:text-zinc-400';
         } else {
-            localStorage.setItem('theme', 'light');
-            if (themeIcon) themeIcon.className = 'fas fa-moon text-zinc-400';
+            htmlElement.classList.add('dark');
+            if (themeIcon) themeIcon.className = 'fas fa-sun text-amber-500 dark:text-amber-400';
         }
-    });
-}
-</script>
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                if (htmlElement.classList.contains('dark')) {
+                    htmlElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                    if (themeIcon) themeIcon.className = 'fas fa-moon text-zinc-500 dark:text-zinc-400';
+                } else {
+                    htmlElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    if (themeIcon) themeIcon.className = 'fas fa-sun text-amber-500 dark:text-amber-400';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
