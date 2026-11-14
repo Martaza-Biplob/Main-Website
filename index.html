@@ -935,5 +935,30 @@
             if (skillsContainer) skillObserver.observe(skillsContainer);
         });
     </script>
+    <script>
+// Dark & Light Mode Toggle Logic
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const htmlElement = document.documentElement;
+
+if (localStorage.getItem('theme') === 'light') {
+    htmlElement.classList.remove('dark');
+    if (themeIcon) themeIcon.className = 'fas fa-moon text-zinc-400';
+}
+
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark');
+        
+        if (htmlElement.classList.contains('dark')) {
+            localStorage.setItem('theme', 'dark');
+            if (themeIcon) themeIcon.className = 'fas fa-sun text-amber-400';
+        } else {
+            localStorage.setItem('theme', 'light');
+            if (themeIcon) themeIcon.className = 'fas fa-moon text-zinc-400';
+        }
+    });
+}
+</script>
 </body>
 </html>
